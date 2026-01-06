@@ -6,7 +6,7 @@
 /*   By: JuHyeon <JuHyeon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:05:38 by juhyeonl          #+#    #+#             */
-/*   Updated: 2026/01/06 20:51:11 by JuHyeon          ###   ########.fr       */
+/*   Updated: 2026/01/06 20:51:47 by JuHyeon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,4 @@ Animal& Animal::operator=(const Animal& other)
 std::string		Animal::getType() const
 {
 	return (this->type);
-}
-
-void	Animal::makeSound() const
-{
-	std::cout << "Animal SOUND!!!!" << std::endl;
 }

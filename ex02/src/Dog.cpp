@@ -1,38 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: JuHyeon <JuHyeon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/05 15:13:46 by juhyeonl          #+#    #+#             */
-/*   Updated: 2026/01/06 07:52:22 by JuHyeon          ###   ########.fr       */
+/*   Created: 2026/01/05 15:14:57 by juhyeonl          #+#    #+#             */
+/*   Updated: 2026/01/06 07:27:32 by JuHyeon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "Cat.hpp"
+# include "Dog.hpp"
 
-Cat::Cat()
+Dog::Dog()
 {
-	this->type = "Cat";
+	this->type = "Dog";
 	this->brain = new Brain();
-	std::cout << "Cat default constructor called" << std::endl;
+	std::cout << "Dog default constructor called" << std::endl;
 }
-Cat::~Cat()
+Dog::~Dog()
 {
 	delete (this->brain);
-	std::cout << "Cat destructor called" << std::endl;
+	std::cout << "Dog destructor called" << std::endl;
 }
 
-Cat::Cat(const Cat& other) : Animal(other)
+Dog::Dog(const Dog& other) : Animal(other)
 {
-	std::cout << "Cat copy constructor called" << std::endl;
+	std::cout << "Dog copy constructor called" << std::endl;
 	this->brain = new Brain(*other.brain);
 }
 
-Cat& Cat::operator=(const Cat& other)
+Dog& Dog::operator=(const Dog& other)
 {
-	std::cout << "Cat copy assignment constructor called" << std::endl;
+	std::cout << "Dog copy assignment constructor called" << std::endl;
 	if (this != &other)
 	{
 		Animal::operator=(other);
@@ -42,7 +42,7 @@ Cat& Cat::operator=(const Cat& other)
 	return (*this);
 }
 
-void	Cat::makeSound() const
+void	Dog::makeSound() const
 {
-	std::cout << "MEOW~" << std::endl;
+	std::cout << "BOW WOW!" << std::endl;
 }
