@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juhyeonl <juhyeonl@student.42.fr>          +#+  +:+       +#+        */
+/*   By: JuHyeon <JuHyeon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:05:09 by juhyeonl          #+#    #+#             */
-/*   Updated: 2026/01/05 15:05:31 by juhyeonl         ###   ########.fr       */
+/*   Updated: 2026/01/06 07:18:05 by JuHyeon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,12 @@
 # include <string>
 # include <iostream>
 # include "Animal.hpp"
+# include "Brain.hpp"
 
 class Dog : public Animal
 {
+	private:
+		Brain	*brain;
 	public:
 		Dog();
 		~Dog();

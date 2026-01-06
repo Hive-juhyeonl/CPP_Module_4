@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juhyeonl <juhyeonl@student.42.fr>          +#+  +:+       +#+        */
+/*   By: JuHyeon <JuHyeon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:14:57 by juhyeonl          #+#    #+#             */
-/*   Updated: 2026/01/05 16:29:34 by juhyeonl         ###   ########.fr       */
+/*   Updated: 2026/01/06 07:20:43 by JuHyeon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,24 +15,30 @@
 Dog::Dog()
 {
 	this->type = "Dog";
+	this->brain = new Brain();
 	std::cout << "Dog default constructor called" << std::endl;
 }
 Dog::~Dog()
 {
+	delete (this->brain);
 	std::cout << "Dog destructor called" << std::endl;
 }
 
 Dog::Dog(const Dog& other)
 {
 	std::cout << "Dog copy constructor called" << std::endl;
-	*this = other;
+	this->brain = new Brain(*other.brain);
 }
 
 Dog& Dog::operator=(const Dog& other)
 {
 	std::cout << "Dog copy assignment constructor called" << std::endl;
 	if (this != &other)
-		Dog::operator=(other);
+	{
+		Animal::operator=(other);
+		delete (this->brain);
+		this->brain = new Brain(*other.brain);
+	}
 	return (*this);
 }
 
