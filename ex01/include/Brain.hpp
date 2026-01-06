@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juhyeonl <juhyeonl@student.42.fr>          +#+  +:+       +#+        */
+/*   By: JuHyeon <JuHyeon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 16:34:06 by juhyeonl          #+#    #+#             */
-/*   Updated: 2026/01/05 16:36:18 by juhyeonl         ###   ########.fr       */
+/*   Updated: 2026/01/06 07:00:55 by JuHyeon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,16 @@
 # define BRAIN_HPP
 
 # include <string>
+# include <iostream>
 
 class Brain
 {
-	protected:
+	public:
 		std::string	ideas[100];
+		Brain();
+		~Brain();
+		Brain(const Brain& other);
+		Brain& operator=(const Brain& other);
 };
 
 #endif
