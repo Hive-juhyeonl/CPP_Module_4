@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juhyeonl <juhyeonl@student.42.fr>          +#+  +:+       +#+        */
+/*   By: JuHyeon <JuHyeon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:16:36 by juhyeonl          #+#    #+#             */
-/*   Updated: 2026/01/05 16:27:13 by juhyeonl         ###   ########.fr       */
+/*   Updated: 2026/01/06 07:42:43 by JuHyeon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,21 +18,29 @@
 
 int main()
 {
-	const Animal* meta = new Animal();
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	i->makeSound(); //will output the cat sound!
-	j->makeSound();
-	meta->makeSound();
-	delete(i);
-	delete(j);
-	delete(meta);
-	std::cout << "===== WRONG =====" << std::endl;
-	const WrongAnimal* wrongcat = new WrongCat();
-	wrongcat->getType();
-	wrongcat->makeSound();
-	delete(wrongcat);
-	return 0;
+    const Animal* j = new Dog();
+    const Animal* i = new Cat();
+
+    delete j;// Should not create a leak
+    delete i;
+    std::cout << std::endl;
+    std::cout << "===== Array of Animals Test =====" << std::endl;
+    int size = 4;
+    Animal* animals[size];
+    for (int k = 0; k < size; k++)
+    {
+        if (k < size / 2)
+            animals[k] = new Dog();
+        else
+            animals[k] = new Cat();
+    }
+    std::cout << std::endl;
+    for (int k = 0; k < size; k++)
+        delete animals[k];
+    std::cout << std::endl;
+
+    std::cout << "===== Deep Copy Test =====" << std::endl;
+    Dog basic;
+        Dog tmp = basic; 
+    return 0;
 }
