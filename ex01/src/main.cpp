@@ -6,7 +6,7 @@
 /*   By: JuHyeon <JuHyeon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:16:36 by juhyeonl          #+#    #+#             */
-/*   Updated: 2026/01/08 21:58:10 by JuHyeon          ###   ########.fr       */
+/*   Updated: 2026/01/08 22:38:34 by JuHyeon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 
 int main()
 {
+	Animal test;
 	const Animal* j = new Dog();
 	const Animal* i = new Cat();
 
