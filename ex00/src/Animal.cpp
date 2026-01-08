@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juhyeonl <juhyeonl@student.42.fr>          +#+  +:+       +#+        */
+/*   By: JuHyeon <JuHyeon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:05:38 by juhyeonl          #+#    #+#             */
-/*   Updated: 2026/01/05 16:20:29 by juhyeonl         ###   ########.fr       */
+/*   Updated: 2026/01/08 22:00:55 by JuHyeon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ Animal::Animal(const Animal& other)
 
 Animal& Animal::operator=(const Animal& other)
 {
-	std::cout << "Animal copy assignment constructor called" << std::endl;
+	std::cout << "Animal copy assignment operator called" << std::endl;
 	if (this != &other)
 		Animal::operator=(other);
 	return (*this);

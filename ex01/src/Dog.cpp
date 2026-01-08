@@ -6,7 +6,7 @@
 /*   By: JuHyeon <JuHyeon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:14:57 by juhyeonl          #+#    #+#             */
-/*   Updated: 2026/01/06 07:27:32 by JuHyeon          ###   ########.fr       */
+/*   Updated: 2026/01/08 22:00:32 by JuHyeon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ Dog::Dog(const Dog& other) : Animal(other)
 
 Dog& Dog::operator=(const Dog& other)
 {
-	std::cout << "Dog copy assignment constructor called" << std::endl;
+	std::cout << "Dog copy assignment operator called" << std::endl;
 	if (this != &other)
 	{
 		Animal::operator=(other);

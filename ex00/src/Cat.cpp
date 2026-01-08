@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juhyeonl <juhyeonl@student.42.fr>          +#+  +:+       +#+        */
+/*   By: JuHyeon <JuHyeon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:13:46 by juhyeonl          #+#    #+#             */
-/*   Updated: 2026/01/05 16:30:59 by juhyeonl         ###   ########.fr       */
+/*   Updated: 2026/01/08 22:00:59 by JuHyeon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ Cat::Cat(const Cat& other)
 
 Cat& Cat::operator=(const Cat& other)
 {
-	std::cout << "Cat copy assignment constructor called" << std::endl;
+	std::cout << "Cat copy assignment operator called" << std::endl;
 	if (this != &other)
 		Cat::operator=(other);
 	return (*this);

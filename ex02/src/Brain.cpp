@@ -6,7 +6,7 @@
 /*   By: JuHyeon <JuHyeon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 06:26:00 by JuHyeon           #+#    #+#             */
-/*   Updated: 2026/01/06 07:12:05 by JuHyeon          ###   ########.fr       */
+/*   Updated: 2026/01/08 21:59:54 by JuHyeon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ Brain::Brain(const Brain& other)
 
 Brain& Brain::operator=(const Brain& other)
 {
-	std::cout << "Brain copy assignment constructor called" << std::endl;
+	std::cout << "Brain copy assignment operator called" << std::endl;
 	if (this != &other)
     {
         for (int i = 0; i < 100; i++)

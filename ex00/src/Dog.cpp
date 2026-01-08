@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juhyeonl <juhyeonl@student.42.fr>          +#+  +:+       +#+        */
+/*   By: JuHyeon <JuHyeon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:14:57 by juhyeonl          #+#    #+#             */
-/*   Updated: 2026/01/05 16:29:34 by juhyeonl         ###   ########.fr       */
+/*   Updated: 2026/01/08 22:01:06 by JuHyeon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ Dog::Dog(const Dog& other)
 
 Dog& Dog::operator=(const Dog& other)
 {
-	std::cout << "Dog copy assignment constructor called" << std::endl;
+	std::cout << "Dog copy assignment operator called" << std::endl;
 	if (this != &other)
 		Dog::operator=(other);
 	return (*this);

@@ -29,7 +29,7 @@ WrongCat::WrongCat(const WrongCat& other)
 
 WrongCat& WrongCat::operator=(const WrongCat& other)
 {
-	std::cout << "WrongCat copy assignment constructor called" << std::endl;
+	std::cout << "WrongCat copy assignment operator called" << std::endl;
 	if (this != &other)
 		WrongCat::operator=(other);
 	return (*this);
