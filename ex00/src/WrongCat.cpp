@@ -14,6 +14,7 @@
 
 WrongCat::WrongCat()
 {
+	this->type = "WrongCat";
 	std::cout << "WrongCat default constructor called" << std::endl;
 }
 WrongCat::~WrongCat()
@@ -25,6 +26,7 @@ WrongCat::WrongCat(const WrongCat& other) : WrongAnimal(other)
 {
 	std::cout << "WrongCat copy constructor called" << std::endl;
 	*this = other;
+	this->type = "WrongCat";
 }
 
 WrongCat& WrongCat::operator=(const WrongCat& other)

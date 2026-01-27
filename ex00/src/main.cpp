@@ -6,7 +6,7 @@
 /*   By: juhyeonl <juhyeonl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:16:36 by juhyeonl          #+#    #+#             */
-/*   Updated: 2026/01/05 16:27:13 by juhyeonl         ###   ########.fr       */
+/*   Updated: 2026/01/27 14:47:30 by juhyeonl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,21 +18,34 @@
 
 int main()
 {
-	const Animal* meta = new Animal();
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	i->makeSound(); //will output the cat sound!
-	j->makeSound();
-	meta->makeSound();
-	delete(i);
-	delete(j);
-	delete(meta);
-	std::cout << "===== WRONG =====" << std::endl;
+	std::cout << "======== Constructor ========" << std::endl;
+	const Animal* animal = new Animal();
+	const Animal* dog = new Dog();
+	const Animal* cat = new Cat();
+	std::cout << "\n======== Type ========" << std::endl;
+	std::cout << animal->getType() << " " << std::endl;
+	std::cout << dog->getType() << " " << std::endl;
+	std::cout << cat->getType() << " " << std::endl;
+	std::cout << "\n======== Sound ========" << std::endl;
+	animal->makeSound();
+	cat->makeSound();
+	dog->makeSound();
+	std::cout << "\n======== Destructor ========" << std::endl;
+	delete(cat);
+	delete(dog);
+	delete(animal);
+	std::cout << "\n======== WRONG ========" << std::endl;
+	std::cout << "======== Constructor ========" << std::endl;
+	const WrongAnimal* wronganimal = new WrongAnimal();
 	const WrongAnimal* wrongcat = new WrongCat();
+	std::cout << "\n======== Type ========" << std::endl;
+	wronganimal->getType();
 	wrongcat->getType();
+	std::cout << "\n======== Sound ========" << std::endl;
+	wronganimal->makeSound();
 	wrongcat->makeSound();
+	std::cout << "\n======== Destructor ========" << std::endl;
 	delete(wrongcat);
+	delete(wronganimal);
 	return 0;
 }
