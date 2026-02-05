@@ -16,6 +16,14 @@
 #include "WrongAnimal.hpp"
 #include "WrongCat.hpp"
 
+/*
+	in Animal class is a virtual function
+	so we cannot create an instance of Animal class directly. it is Dynamic Binding.
+	But in WrongAnimal class is not a virtual function
+	so we can create an instance of WrongAnimal class directly. it is Static Binding.
+	Dynamic Binding can use makeSound() function of child class
+	but Static Binding cannot use makeSound() function of child class.
+*/
 int main()
 {
 	std::cout << "======== Constructor ========" << std::endl;
@@ -39,8 +47,8 @@ int main()
 	const WrongAnimal* wronganimal = new WrongAnimal();
 	const WrongAnimal* wrongcat = new WrongCat();
 	std::cout << "\n======== Type ========" << std::endl;
-	wronganimal->getType();
-	wrongcat->getType();
+	std::cout << wronganimal->getType() << " " << std::endl;
+	std::cout << wrongcat->getType() << " " << std::endl;
 	std::cout << "\n======== Sound ========" << std::endl;
 	wronganimal->makeSound();
 	wrongcat->makeSound();

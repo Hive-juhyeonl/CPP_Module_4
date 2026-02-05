@@ -16,6 +16,10 @@
 # include <string>
 # include <iostream>
 
+/*
+	
+*/
+
 class Animal
 {
 	protected:

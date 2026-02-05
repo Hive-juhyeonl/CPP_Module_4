@@ -16,6 +16,11 @@
 # include <string>
 # include <iostream>
 
+/*
+	~Animal() will upcasting(Animal* pointer pointing to Dog or Cat) and call the child class's destructor.
+	that is why in the result, Dog and Cat's destructor is called first, then Animal's destructor is called.
+*/
+
 class Animal
 {
 	protected:
